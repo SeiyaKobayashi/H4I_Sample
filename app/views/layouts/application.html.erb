@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hack4impact</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <header>
+      <div class="header-title">
+        <%= link_to("hack4impact", "/") %>
+      </div>
+      <ul class="header-menus">
+        <% if @current_user %>
+          <li>
+            <a href="<%= "/user/#{@current_user.id}" %>">
+              <img src="<%= "/user_images/#{@current_user.image_name}" %>">
+            </a>
+          </li>
+          <!-- if it's admin -->
+          <% if @current_user.id == 1 %>
+            <li><a href="/post/index"><i class="fa fa-address-card"></i></a></li>
+          <% end %>
+          <% post = Post.find_by(user_id: @current_user.id) %>
+          <% if post != nil %>
+            <li><a href=<%= "/post/#{post.id}/edit" %>><i class="fa fa-edit"></i></a></li>
+          <% else %>
+            <li><a href="/post/new"><i class="fa fa-edit"></i></a></li>
+          <% end %>
+          <li><%= link_to("Logout", "/logout", {method: :post}) %></li>
+        <% else %>
+          <li><%= link_to("Sign Up", "/signup") %></li>
+          <li><%= link_to("Login", "/login") %></li>
+        <% end %>
+      </ul>
+    </header>
+    <% if flash[:notice] %>
+      <div class="flash-box">
+        <div class="flash"><%= flash[:notice]%></div>
+      </div>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

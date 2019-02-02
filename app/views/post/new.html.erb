@@ -1,0 +1,53 @@
+<div class="main posts-new">
+  <div class="container-posts-new">
+    <h1 class="posts-new-heading">hack4impact Student Application</h1>
+    <!-- Redirect to "/posts/create" when "Post" button is clicked -->
+    <%= form_tag("/post/create") do %>
+      <div class="form">
+        <div class="form-body">
+          <% @post.errors.full_messages.each do |message| %>
+            <div class="form-error">
+              <%= message %>
+            </div>
+          <% end %>
+          <div class="form-inputs">
+            <p>Full Name <font color="red">*</font></p>
+            <input name = "name" placeholder = "Your answer" required>
+            <p>Email <font color="red">*</font></p>
+            <input name = "email" placeholder = "Your answer" required>
+            <p>What year are you? <font color="red">*</font></p>
+            <input name = "year" placeholder = "Your answer" required>
+            <p>What is your major? <font color="red">*</font></p>
+            <input name = "major" placeholder = "Your answer" required>
+            <p>Give an example of how technology empowered a social impact organization
+               or cause that you’re passionate about. <font color="red">*</font></p>
+            <textarea name = "Q1" placeholder = "Your answer" required></textarea>
+            <p>Recall a social impact cause that you have supported through volunteering or work.
+               Tell us about your experience. <font color="red">*</font></p>
+            <textarea name = "Q2" placeholder = "Your answer" required></textarea>
+            <p>Other commitments? <font color="red">*</font></p>
+            Please list out the other activities and commitments you expect to have this semester.
+            Please indicate their approximate hours/week and also indicate approximately how many hours/week
+            you plan to devote to Hack4impact. We expect new members to commit about 5-8 hours per week towards Hack4Impact.
+            <textarea name = "Q3" placeholder = "Your answer" required></textarea>
+            <p>List your technical/design experience <font color="red">*</font></p>
+            (e.g. classes taken, side projects, internships, class projects, portfolio, etc.)
+            Bonus points if you link us to your live projects, Github, or portfolio!
+            <textarea name = "Q4" placeholder = "Your answer" required></textarea>
+            <p>Copy a short (less than 25 lines) code snippet you wrote and explain why you are proud of it. <font color="red">*</font></p>
+            Did you figure out how to do something that was giving you trouble? Did you use an interesting technique,
+            data structure, etc.? Did you make something more efficient or easier to read?
+            (note: it doesn't have to be a program that is complex or super technical, we're more interested in what you learned from it)
+            <textarea name = "Q5" placeholder = "Your answer" required></textarea>
+            <p>Is there anything else you think we should know?</p>
+            <textarea name = "Q6" placeholder = "Your answer" required></textarea>
+            <p><font color="red">* fields are required.</font></p>
+          </div>
+          <div class="button">
+            <input type= "submit" value = "Submit">
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

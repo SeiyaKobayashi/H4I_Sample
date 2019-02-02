@@ -1,0 +1,39 @@
+<div class="main posts-index">
+  <div class="container-posts-index">
+      <% @posts.each do |post|%>
+        <div class="posts-index-item">
+          <div class="post-left">
+            <img src="<%= "/user_images/#{post.user.image_name}" %>">
+            <div class="post-user-name">
+              <%= link_to(post.user.name, "/user/#{post.user.id}") %>
+            </div>
+          </div>
+          <div class="post-right">
+            <strong>Name:</strong>
+            <%= simple_format(post.name) %><br>
+            <strong>Email:</strong>
+            <%= simple_format(post.email) %><br>
+            <strong>Year:</strong>
+            <%= simple_format(post.year) %><br>
+            <strong>Major:</strong>
+            <%= simple_format(post.major) %><br>
+            <strong>Give an example of how technology empowered a social impact organization
+                    or cause that you’re passionate about.:</strong>
+            <%= simple_format(post.Q1) %><br>
+            <strong>Recall a social impact cause that you have supported through volunteering or work.
+                    Tell us about your experience.:</strong>
+            <%= simple_format(post.Q2) %><br>
+            <strong>Other commitments?:</strong>
+            <%= simple_format(post.Q3) %><br>
+            <strong>List your technical/design experience:</strong>
+            <%= simple_format(post.Q4) %><br>
+            <strong>Copy a short (less than 25 lines) code snippet you wrote
+                    and explain why you are proud of it.:</strong>
+            <%= simple_format(post.Q5) %><br>
+            <strong>Is there anything else you think we should know?:</strong>
+            <%= simple_format(post.Q6) %>
+          </div>
+        </div>
+      <% end %>
+  </div>
+</div>

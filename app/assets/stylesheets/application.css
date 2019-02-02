@@ -1,0 +1,154 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font: 100% / 1.5 'Avenir Next', sans-serif;
+  letter-spacing: 1px;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #2a2e30;
+  font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+input {
+  background-color: transparent;
+  outline-width: 0;
+}
+
+form input[type="submit"] {
+  border: double;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+body {
+  color: #2a2e30;
+  background-color: #fffef9;
+  margin: 0;
+  min-height: 1vh;
+}
+
+body #wrapper {
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+}
+
+.main {
+  color: #2a2e30;
+  background-color: #fffef9;
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+}
+
+.container {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 0 15px;
+  clear: both;
+}
+
+/* Header */
+
+header {
+  width: 100%;
+  height: 9vh;
+  position: fixed;
+  z-index: 3;
+  background-color: #282826;
+}
+
+.header-title * {
+  float: left;
+  color: white;
+  font-size: 1.9vw;
+  line-height: 9.5vh;
+  padding-left: 2vw;
+}
+
+.header-title:hover {
+  opacity: 0.8;
+}
+
+.header-menus {
+  float: right;
+  padding-right: 4vh;
+}
+
+.header-menus li {
+  float: left;
+  line-height: 9vh;
+  padding-left: 1.6vw;
+}
+
+.header-menus a {
+  float: left;
+  color: white;
+  font-size: 2.2vh;
+}
+
+.header-menus a:hover {
+  opacity: 0.8;
+}
+
+.header-menus .fa {
+  float: left;
+  color: white;
+  font-size: 3.8vh;
+  line-height: 9vh;
+}
+
+.header-menus img {
+  width: 2.7vw;
+  height: 2.7vw;
+  border-radius: 50%;
+  margin: 2.1vh 0 0;
+  object-fit: cover;
+}
+
+.header-menus li img:hover {
+  opacity: 0.8;
+}
+
+li input {
+  border-style: double;
+  color: white;
+  background-color: transparent;
+  height: 24px;
+  letter-spacing: 1px;
+}

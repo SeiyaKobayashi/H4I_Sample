@@ -1,0 +1,15 @@
+current directory: /Users/SeiyaKobayashi/Desktop/Dev/Projects/H4I_Internal_App/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+/Users/SeiyaKobayashi/.rbenv/versions/2.4.2/bin/ruby -r ./siteconf20190201-24774-177mgrn.rb extconf.rb
+creating Makefile
+
+current directory: /Users/SeiyaKobayashi/Desktop/Dev/Projects/H4I_Internal_App/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /Users/SeiyaKobayashi/Desktop/Dev/Projects/H4I_Internal_App/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.bundle
+
+current directory: /Users/SeiyaKobayashi/Desktop/Dev/Projects/H4I_Internal_App/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20190201-24774-idxgx6/bindex
